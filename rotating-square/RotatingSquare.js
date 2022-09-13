@@ -211,14 +211,14 @@ function mainEntrance() {
     * @function
     */
     var runanimation = (() => {
-        var rotation = 0;
+        var rotation = 360;
 
         return () => {
             draw(ctx, rotation);
 
-            rotation += 2;
-            if (rotation > 360) {
-                rotation = 0;
+            rotation -= 2;
+            if (rotation < 0) {
+                rotation = 360;
             }
 
             if(listener) {
@@ -241,18 +241,22 @@ function setListeners() {
     window.addEventListener("keydown", function (e) {
         console.log(1);
         if(e.key == 'r' && eixo != 0) {
+            console.log('r');
             listener = true;
             eixo = 0;
             color = red;
         } else if(e.key == 'g' && eixo != 1) {
+            console.log('g');
             listener = true;
             eixo = 1;
             color = green;
         } else if(e.key == 'b' && eixo != 2) {
+            console.log('b');
             listener = true;
             eixo = 2;
             color = blue;
         } else if(e.key == 'w' && eixo != 3) {
+            console.log('w');
             listener = true;
             eixo = 3;
             color = white;
