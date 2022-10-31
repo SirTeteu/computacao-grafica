@@ -18,10 +18,13 @@ Vertex shader does basic Lambert shading. -->
 
         <ul style="list-style: none">
             <li>t, T - torso rotation</li>
-            <li>s, S - shoulder rotation</li>
-            <li>a, A - arm rotation</li>
-            <li>h, H - hand rotation</li>
-            <li>l, L - head rotation</li>
+            <li>s, S - shoulder rotation (maximum 180 degree to forward, maximum 90 degree to backward)</li>
+            <li>a, A - arm rotation (maximum 120 degree to forward, maximum 0 degree to backward)</li>
+            <li>h, H - hand rotation (maximum 90 degree to both sides)</li>
+            <li>l, L - head rotation (maximum 90 degree to both sides)</li>
+            <li>q, Q - thigh rotation (maximum 0 degree to forward, maximum 90 degree to backward)</li>
+            <li>w, W - leg rotation rotation (maximum 90 degree to both sides)</li>
+            <li>e, E - feet rotation (maximum 15 degree to both sides)</li>
             <li id="options"></li>
         </ul>
 
